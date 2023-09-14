@@ -1,0 +1,294 @@
+html{
+    background-image: url(Backgrounds/Back1.jpg)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.Introduction .Name{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(#ffb338, #77571d); 
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+   transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+.ProjectName:hover,.Name:hover{
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+}
+
+.Introduction {
+    color: #ffffffe6;
+    text-align: center;
+    margin: 20px;
+    padding: 2%;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 30pt;
+    font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+    border: 2px solid #ffffffbf;
+    padding: 5px;
+    margin: 10px;
+}
+
+p{
+    font-size: 12pt;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    padding: 5px;
+}
+
+.AboutList{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+}
+
+.Projects{
+    color: #ffffffe6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.ProjectList{
+  background-image: url(Backgrounds/Back4.jpg);  
+    padding: 5px;
+    list-style-type: none;
+}
+
+.ProjectHeader{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+}
+
+.ProjectName{
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  background-image: linear-gradient(#ffb338, #77571d); 
+  background-size:  100% 10px;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+.ProjectName a{
+  color: white;
+  text-decoration: none;
+}
+
+.ProjectLinks{
+    left: 20px;
+    color: white;
+}
+
+.Socials{
+    padding: 1px;
+    color: white;
+    background-image: url(Backgrounds/Foot2.jpg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.Socials a[href]{
+    color: bisque;
+    text-decoration: none;
+}
+
+.Skills span{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Button */
+
+.btn-66,
+.btn-66 *,
+.btn-66 :after,
+.btn-66 :before,
+.btn-66:after,
+.btn-66:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-66 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #272727;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.btn-66:disabled {
+  cursor: default;
+}
+.btn-66:-moz-focusring {
+  outline: auto;
+}
+.btn-66 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-66 [hidden] {
+  display: none;
+}
+.btn-66 {
+  --height: 20px;
+  --progress: 0px;
+  border: 2px solid wheat;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: transparent;
+  display: block;
+  font-weight: 900;
+  line-height: var(--height);
+  overflow: hidden;
+  padding: 0 60px;
+  position: relative;
+  text-shadow: 0 calc(var(--progress) * -1) #fff,
+    0 calc(var(--height) - var(--progress)) #ffb338;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.btn-66:hover {
+  --progress: var(--height);
+  border-color: #ffb338;
+}
+
+
+/* Project Header  */
+
+.Projects > div {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ProjectHeading{
+    background: linear-gradient(to bottom, #ffb338 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffb338 40%,#3a2c0f 78%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+  font-family:'Bebas Neue', cursive;
+    position: relative;
+	text-transform: uppercase;	
+	font-size: 50pt;
+	margin: 0;
+	font-weight: 400;
+  border: #000;
+}
+
+h1:after {
+    background: none;
+    content: attr(data-heading);
+    left: 0;
+	top: 0;
+    z-index: -1;
+    position: absolute;
+    text-shadow: 
+		-1px 0 1px #c6bb9f, 
+		0 1px 1px #c6bb9f, 
+		5px 5px 10px rgba(0, 0, 0, 0.4),
+		-5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+
+  /* Intro Paragraph  */
+
+  :root {
+    --color-primary: hsl(37 , 100% , 61%);
+    --color-secondary: hsl(37, 100% , 61%);
+    --text: hsl(37, 100% , 61%);
+  }
+  
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--background);
+    -webkit-text-fill-color: var(--background);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body .Introduction p{
+    display: grid;
+    gap: 4vh;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  blockquote {
+    border-left: 5px solid;
+    margin-left: 0;
+    padding: 1rem 0 1rem 2rem;
+    font-size: 2rem;
+  }
+
+  .About {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      35deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .ProjectDescription{
+    border-left: 5px solid;
+    margin-left: 0;
+    padding: 1rem 0 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      35deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+  
+    p {
+      margin: 0;
+    }
+  }
+  
+  .ProjectDescription li{
+    text-align: left;
+  }
