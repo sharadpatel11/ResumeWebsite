@@ -1,33 +1,22 @@
 html{
-    background-image: url(Backgrounds/Back1.jpg)
+  background-image: url(Backgrounds/Back7New.jpg);
 }
 
 ::selection{
   color: lightskyblue;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-.ProjectName:hover,.ProjectHeading:hover{
-    background-size: 100% 100%;
-    background-position: 0% 100%;
-    transition: background-position .7s, background-size .5s ease-in-out;
+.Welcome{
+  color: #ffb338;
+  text-align: center;
 }
 
 .Introduction {
-    color: #ffffffe6;
-    text-align: center;
-    margin: 20px;
-    padding: 2%;
-}
-
-h1 {
-    font-weight: 900;
-    font-size: 30pt;
-    font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
-    border: 2px solid #ffffffbf;
-    padding: 5px;
-    margin: 10px;
+  color: #ffffffe6;
+  text-align: center;
+  margin-bottom: 0px;
+  padding: 2%;
+  grid: 1fr 1fr;
 }
 
 p{
@@ -54,31 +43,9 @@ p{
 }
 
 .ProjectList{
-    background-image: url(Backgrounds/Back4.jpg);  
+    background-image: url(Backgrounds/Back5.jpg);  
     padding: 5px;
     list-style-type: none;
-}
-
-.ProjectHeadingDiv {
-  text-align: left;
-  margin-left: 40px;
-}
-
-.ProjectsDiv{
-  text-align: center;
-}
-
-.ProjectHeading{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 3em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-image: linear-gradient(#ffb338, #77571d); 
-    background-size: 100% 10px;
-    background-repeat: no-repeat;
-    background-position: 0% 100%;
-    transition: background-size .7s, background-position .5s ease-in-out;
 }
 
 .ProjectHeader{
@@ -108,20 +75,16 @@ p{
 
 .ProjectName a{
     text-decoration: none;
-    color: beige;
+    color: #ffb338;
 }
+
+/* Socials CSS */
 
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/link.css');
-
-.ProjectLinks{
-    left: 20px;
-    color: white;
-}
 
 .Socials{
     padding: 1px;
     color: white;
-    background-image: url(Backgrounds/Foot2.jpg);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
@@ -137,7 +100,7 @@ p{
   font-weight: 600;
 }
 
-/* Intro Paragraph  */
+/* Intro Paragraph and About CSS */
 
 :root {
     --color-primary: hsl(37 , 100% , 61%);
@@ -181,7 +144,6 @@ blockquote {
       var(--color-primary),
       var(--color-secondary)
     );
-
     p {
       margin: 0;
     }
@@ -195,6 +157,8 @@ blockquote {
     color: #ffb338;
     margin-top: 32px;
 }
+
+/* Project Description CSS */
 
 .ProjectDescription{
     border-left: 5px solid;
@@ -291,6 +255,12 @@ blockquote {
 @import url("https://fonts.googleapis.com/css?family=Catamaran:900&display=swap");
 
 .Header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.ProjectH{
   display: flex;
   height: 100%;
 }
@@ -312,7 +282,7 @@ blockquote {
   padding: 0;
   overflow: hidden;
   text-transform: uppercase;
-  font-size: 6em;
+  font-size: 4em;
   font-family: 'Bebas Neue', cursive;
   -webkit-text-stroke: 1px white;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
@@ -329,21 +299,23 @@ blockquote {
   transition: transform 580ms cubic-bezier(0.2, 0.1, 0.15, 1.32);
 }
 .Title__highlight {
-  position: absolute;
+  position: relative;
   width: 100%;
   bottom: -50;
   left: 0;
-  height: 50px;
+  height: 10px;
   background-color: #f4b550;
   z-index: -1;
   transition: transform 400ms ease;
 }
 .Title__filled {
   position: absolute;
+  text-align: center;
   margin: 0;
   padding: 0;
+  border: none;
   text-transform: uppercase;
-  font-size: 6em;
+  font-size: 4em;
   top: 0;
   -webkit-clip-path: polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%);
           clip-path: polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%);
@@ -360,4 +332,165 @@ blockquote {
 }
 .Title:hover .Title__highlight {
   transform: translateY(-2.2em);
+}
+
+.AboutAndProject {
+    display: grid;
+    grid-template-columns: 1fr .25fr;
+}
+
+.AboutHeader{
+  margin-left: 30px;
+}
+
+/* Project Header Box */
+.with-drop-shadow {
+  filter: drop-shadow(
+    1px 2px 4px hsl(34, 76%, 46%)
+  );
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(./Backgrounds/Back7.avif);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.box a{
+  font-weight: 600;
+  background-image: linear-gradient(
+    to right,
+    #ff9d00,
+    #f7b733 50%,
+    beige 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.box a:before {
+  content: '';
+  background: #f4b550;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.box a:hover {
+ background-position: 0;
+}
+
+.box a:hover::before {
+  width:100%;
+}
+
+.ProjectBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  height: 45vh;
+}
+
+.ProjectHeader span{
+  text-align: center;
+}
+
+.ProjectHeader a{
+  font-weight: 600;
+  background-image: linear-gradient(
+    to right,
+    #ff9d00,
+    #f7b733 50%,
+    beige 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.ProjectHeader a:before {
+  content: '';
+  background: #f4b550;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.ProjectHeader a:hover {
+ background-position: 0;
+}
+
+.ProjectHeader a:hover::before {
+  width:100%;
+}
+
+/* Welcome CSS */
+
+.WelcomeDiv{
+  text-align: center;
+}
+
+.Welcome{
+  font-size: 40px;
+  font-weight: 600;
+  background-image: linear-gradient(
+    to right,
+    #ff9d00,
+    #f7b733 50%,
+    beige 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.Welcome:before {
+  content: '';
+  background: #f4b550;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.Welcome:hover {
+ background-position: 0;
+}
+
+.Welcome:hover::before {
+  width:100%;
 }
