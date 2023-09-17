@@ -1,5 +1,11 @@
 html{
-  background-image: url(Backgrounds/Back7New.jpg);
+  background-image: url(Backgrounds/Back9.jpg);
+}
+
+body{
+  height: 100vh;
+  max-width: 100vw;
+  margin:0;
 }
 
 ::selection{
@@ -21,7 +27,7 @@ html{
 
 p{
     font-size: 12pt;
-    font-weight: 800;
+    font-weight: 600;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: justify;
     padding: 5px;
@@ -121,11 +127,11 @@ p{
 body .Introduction p{
     display: grid;
     gap: 4vh;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: 'Bebas Neue', cursive;
     line-height: 1.5;
     background-color: var(--background);
-    color: var(--text);
+    color: white;
 }
 
 blockquote {
@@ -133,17 +139,14 @@ blockquote {
     margin-left: 0;
     padding: 1rem 0 1rem 2rem;
     font-size: 2rem;
+    color: white;
 }
 
 .About {
     font-family: 'Bebas Neue', cursive;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-      35deg,
-      var(--color-primary),
-      var(--color-secondary)
-    );
+    background-color: white;
     p {
       margin: 0;
     }
@@ -156,6 +159,18 @@ blockquote {
     font-family: 'Bebas Neue', cursive;;
     color: #ffb338;
     margin-top: 32px;
+}
+
+.AboutHeader{
+  padding: 20px;
+  padding-bottom: 30px;
+  margin: 20px;
+  background-color: #8e6728;
+  transition: ease-in 0.3s;
+}
+
+.AboutHeader:hover{
+  border-radius: 65px;
 }
 
 /* Project Description CSS */
@@ -215,7 +230,7 @@ blockquote {
     margin: 4px 0;
     border-left: 2px solid #77571d;
     transition: 0.5s;
-    cursor: pointer;
+    cursor: context-menu;
 }
 
 .list ul li:hover {
@@ -272,7 +287,7 @@ blockquote {
 .Title {
   font-family: 'Bebas Neue', cursive;
   color: white;
-  cursor: pointer;
+  cursor: context-menu;
   position: relative;
 }
 
@@ -282,7 +297,7 @@ blockquote {
   padding: 0;
   overflow: hidden;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 58px;
   font-family: 'Bebas Neue', cursive;
   -webkit-text-stroke: 1px white;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
@@ -315,7 +330,7 @@ blockquote {
   padding: 0;
   border: none;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 60px;
   top: 0;
   -webkit-clip-path: polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%);
           clip-path: polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%);
@@ -454,10 +469,106 @@ blockquote {
 
 .WelcomeDiv{
   text-align: center;
+  cursor: context-menu;
+  display: grid;
+  grid-template-columns: .1fr .1fr 1fr .1fr .1fr;
 }
+
 
 .Welcome{
   font-size: 40px;
+  font-weight: 600;
+  background-image: linear-gradient(
+    to right,
+    #ff9d00,
+    #f7b733 50%,
+    beige 50%
+  );
+  margin-top: 30px;
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.Welcome:before {
+  content: '';
+  background: #f4b550;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.Welcome:hover {
+ background-position: 0;
+}
+
+.Welcome:hover::before {
+  width:100%;
+}
+
+/* Project Link Header */
+
+.ProjectBox .container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+}
+
+.item {
+  align-items: center;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  z-index: 1000;
+}
+.item img {
+  object-fit: cover;
+  height: 400px;
+  width: 400px;
+}
+.item::before, .item::after {
+  background-color: #f4b550;
+  content: "";
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s;
+  transition-delay: 0.2s;
+  transform: translateY(0px) translateX(0px);
+  width: 100%;
+  z-index: -1;
+}
+.item::after {
+  background-color: #4c3106;
+}
+.item:hover {
+  animation-name: hoverPop;
+  animation-duration: 0.4s;
+  animation-fill-direction: forward;
+}
+.item:hover img {
+  box-shadow: 2px 2px 4px 0px rgba(10, 12, 15, 0.27);
+  box-shadow: 0px 0px 30px 0px rgba(10, 12, 15, 0.27);
+}
+.item:hover::before {
+  animation: slick-hover-2 3s 0.4s linear infinite;
+  transform: translateY(-20px) translateX(-20px);
+}
+.item:hover::after {
+  animation: slick-hover 3s 0.4s linear infinite reverse;
+  transform: translateY(20px) translateX(20px);
+}
+
+.ProjectBox a{
+  font-size: 25px;
   font-weight: 600;
   background-image: linear-gradient(
     to right,
@@ -475,7 +586,7 @@ blockquote {
   transition: all 0.3s ease-in-out;
 }
 
-.Welcome:before {
+.ProjectBox a:before {
   content: '';
   background: #f4b550;
   display: block;
@@ -487,10 +598,219 @@ blockquote {
   transition: all 0.3s ease-in-out;
 }
 
-.Welcome:hover {
+.ProjectBox a:hover {
  background-position: 0;
 }
 
-.Welcome:hover::before {
+.ProjectBox a:hover::before {
   width:100%;
+}
+
+@keyframes hoverPop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.05);
+  }
+  66% {
+    transform: scale(0.9);
+  }
+}
+@keyframes slick-hover {
+  0.00% {
+    transform: translateY(20px) translateX(20px);
+  }
+  16.67% {
+    transform: translateY(-13px) translateX(-9px);
+  }
+  33.33% {
+    transform: translateY(4px) translateX(12px);
+  }
+  50.00% {
+    transform: translateY(20px) translateX(-20px);
+  }
+  66.67% {
+    transform: translateY(-3px) translateX(8px);
+  }
+  83.33% {
+    transform: translateY(-15px) translateX(-11px);
+  }
+  100.00% {
+    transform: translateY(20px) translateX(20px);
+  }
+}
+
+@keyframes slick-hover-2 {
+  0.00% {
+    transform: translateY(-20px) translateX(-20px);
+  }
+  16.67% {
+    transform: translateY(3px) translateX(-5px);
+  }
+  33.33% {
+    transform: translateY(18px) translateX(-10px);
+  }
+  50.00% {
+    transform: translateY(-20px) translateX(20px);
+  }
+  66.67% {
+    transform: translateY(15px) translateX(-4px);
+  }
+  83.33% {
+    transform: translateY(-1px) translateX(15px);
+  }
+  100.00% {
+    transform: translateY(-20px) translateX(-20px);
+  }
+}
+
+/* Header Box */
+
+.card {
+  position: relative;
+  padding: 42px 32px;
+  transition: all ease-in-out 0.3s;
+  background-color: #8e6728;
+}
+
+.card__infoicon{
+  display: absolute;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 3em;
+  line-height: 1.8;
+}
+
+.card__description {
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.card__credits {
+  margin: 0;
+  padding: 4px 0;
+  font-size: 1.1em;
+}
+
+.card__reference {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  color: #0099ff;
+  text-decoration: none;
+  transition: ease-in 0.3s;
+}
+
+.card__reference:hover {
+  border-bottom-color: #0099ff;
+}
+
+.card:hover, .card:focus {
+  border-radius: 125px;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.12), 0px 3px 18px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+.card:focus {
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.12), 0px 3px 18px rgba(0, 0, 0, 0.08), 0px 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+
+
+.brand {
+  margin-top: 0;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  text-align: left;
+  
+}
+.brand:before {
+  
+  content: "SP";
+  line-height: 200px;
+  color: #f4b550;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  position: absolute;
+  
+  z-index: 99999 !important;
+}
+
+.logo{
+  animation: 5s linear infinite;
+  animation-name: rotate-0;
+  animation-delay: 0s;
+  transform-origin: 50% 50%;
+  transform: rotate(0deg);
+  
+}
+
+
+svg path{
+  fill:none;
+  stroke-width:2;
+  top:0;
+  right:0;
+  mix-blend-mode: multiply;
+  transform-origin: 50% 50%;
+  transform: rotate(0deg) ;
+  animation: 4s linear infinite;
+}
+
+.logo svg path:nth-child(1) {
+  opacity: 1;
+  animation-name: rotate-1;
+  animation-delay: .5s;
+}
+.logo svg path:nth-child(2) {
+  opacity: .5;
+  animation-name: rotate-2;
+  animation-delay: .6s;
+}
+.logo svg path:nth-child(3) {
+  opacity: .8;
+  animation-name: rotate-3;
+  animation-delay: .7s;
+}
+
+
+@keyframes scale-1 {
+  0%{
+    transform: scale(1);
+  }50% {
+    transform: scale(.9);
+  }100% {
+    transform: scale(1);
+  } 
+}
+
+@keyframes rotate-0 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+} 
+
+@keyframes rotate-1 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-2 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes rotate-3 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(0deg); }
 }
