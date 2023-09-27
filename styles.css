@@ -4,7 +4,7 @@ html{
 
 body{
   height: 100vh;
-  max-width: 100vw;
+  max-width: 100vw !important;
   margin:0;
 }
 
@@ -23,6 +23,7 @@ body{
   margin-bottom: 0px;
   padding: 2%;
   grid: 1fr 1fr;
+  max-width: 100%;
 }
 
 p{
@@ -118,10 +119,6 @@ p{
     background-color: var(--color-primary);
     color: var(--background);
     -webkit-text-fill-color: var(--background);
-}
-
-* {
-    box-sizing: border-box;
 }
 
 body .Introduction p{
@@ -352,6 +349,7 @@ blockquote {
 .AboutAndProject {
     display: grid;
     grid-template-columns: 1fr .25fr;
+    max-width: 100%;
 }
 
 .AboutHeader{
@@ -471,7 +469,8 @@ blockquote {
   text-align: center;
   cursor: context-menu;
   display: grid;
-  grid-template-columns: .1fr .1fr 1fr .1fr .1fr;
+  grid-template-columns: .1fr 1fr .2fr;
+  max-width: 100%;
 }
 
 
@@ -519,6 +518,7 @@ blockquote {
   justify-content: center;
   height: 200px;
   width: 200px;
+  margin-right: 20px;
 }
 
 .item {
@@ -728,8 +728,7 @@ blockquote {
   width: 200px;
   height: 200px;
   position: relative;
-  text-align: left;
-  
+  text-align: left; 
 }
 .brand:before {
   
