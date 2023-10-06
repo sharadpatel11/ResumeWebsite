@@ -19,8 +19,16 @@ body{
     max-width: 100%;
     display: grid;
     grid-template-columns: .25fr 1fr .25fr;
-    justify-content: center;
     font-size: 20px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #header { 
+       font-size: 10px; 
+    }
+ 
 }
 
 #logo{
@@ -40,6 +48,7 @@ body{
 
 #welcome{
     max-width: 100%;
+    max-height: 2px;
     text-align: center;
     position: relative;
 }
@@ -48,13 +57,21 @@ body{
     max-width: 100%;
     position: relative;
     display: inline-block;
-    font-size: 40px;
     color: black;
+    font-size: 40px;
     text-transform: uppercase;
     animation: flip 2s infinite;
     animation-delay: calc(.2s * var(--i))
 }
  
+@media only screen and (max-width: 1000px) {
+
+    #welcome span { 
+       font-size: 15px; 
+    }
+ 
+}
+
 @keyframes flip {
     0%,80% {
       transform: rotateY(360deg) 
@@ -65,6 +82,14 @@ body{
     max-width: 100%;
     margin-top: 35px;
     width: 175px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #socialsDiv { 
+       margin-top: 17.5px; 
+    }
+ 
 }
 
 #socialsDiv {
@@ -144,16 +169,40 @@ body{
     font-size: 18px;
 }
 
-#name2{
+@media only screen and (max-width: 1000px) {
+
+    #name1 { 
+       font-size: 9px; 
+    }
+ 
+}
+
+#name2 {
     font-size: 45px;
 }
 
+@media only screen and (max-width: 1000px) {
+
+    #name2 { 
+       font-size: 22.5px; 
+    }
+ 
+}
+
 #name2 span::before{
-    transition:all 0ms ease-in;
+    transition:all 10ms ease-in;
 }
 
 #name2 span:hover{
-    font-size: 100px;
+    font-size: 75px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #name2 span:hover{ 
+       font-size: 30px; 
+    }
+ 
 }
 
 #introP{
@@ -164,9 +213,18 @@ body{
     padding: 5px;
 }
 
+@media only screen and (max-width: 1000px) {
+
+    #introP { 
+       font-size: 10px; 
+    }
+ 
+}
+
 #introP:hover{
     border: 2px solid black;
     font-weight: 600;
+    transition: all .05s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -178,7 +236,7 @@ body{
     max-width: 100%;
     display: grid;
     grid-template-columns: .75fr .25fr;
-    justify-content: center;
+    justify-content: left;
     margin-top: 50px;
 }
 
@@ -188,67 +246,54 @@ body{
     font-weight: 500;
 }
 
+@media only screen and (max-width: 1000px) {
+
+    #aboutlist{ 
+       font-size: 11px; 
+    }
+ 
+}
+
 #project{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0px;
-    height: 25vh;
-    border: 2px solid black;
-}
-
-#project:hover::before{
-    transition: all 2s ease-in-out;
-}
-
-#project:hover{
-    background-image: url("./Photos/Photo1.png");
-}
-
-#project div{
-    background-image: linear-gradient(
-        to right,
-        #ff9d00,
-        #f7b733 50%,
-        black 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    padding: 5px 0;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
+    text-align: center;
+    border: 2px solid hsla(242, 100%, 70%, 1);
+    border-radius: 25%;
+    font-size: 22px;
 }
 
 #project a{
-    text-align: center;
-    font-size: 35px;
     color: black;
-    cursor: pointer;
-    text-decoration: none;
 }
 
-#project a:before {
-    content: '';
-    background: hsla(242, 100%, 70%, 1);
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
+#project i{
+    font-size: 20px;
 }
-  
-#project a:hover {
-    background-position: 0;
-    font-weight: 600;
+
+#project h4{
+    padding-left: 10px;
+    text-align: left;
 }
-   
-#project a:hover::before {
-    width:100%;
+
+@media only screen and (max-width: 1000px) {
+
+    #project{ 
+       font-size: 11px; 
+    }
+ 
+}
+
+#project:hover{
+    background-color: #f89b9e;
+    background-image: linear-gradient(315deg, #f89b9e 25%, #c9d9ff 70%);;
+    border: none;
+    transition: all .25s ease-in-out;
+}
+
+#project:hover a{
+    color:rgb(88, 14, 237);
 }
 
 #skills{
@@ -260,6 +305,14 @@ body{
     font-weight: 600;
     font-size: 25px;
     margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #skills div{ 
+       font-size: 12.5px; 
+    }
+ 
 }
 
 #aboutlist {
@@ -298,6 +351,14 @@ body{
     color: black;
     font-weight: 600;
     font-size: 22px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #aboutlist ul li:hover span{ 
+       font-size: 11px; 
+    }
+ 
 }
 
 #aboutlist ul li:before {
