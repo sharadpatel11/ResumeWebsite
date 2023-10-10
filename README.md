@@ -1,2 +1,2 @@
 # ResumeWebsite
-<h1> Link: <link href="www.tinyurl.com/sharadpatel"> </h1>
+<h1> Link: www.tinyurl.com/sharadpatel </h1>
